@@ -1,0 +1,29 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Detected image size: 27 x 18
+
+Testing k = 3
+Accuracy for k = 3: 76.33%
+
+Testing k = 5
+Accuracy for k = 5: 77.33%
+
+Testing k = 7
+Accuracy for k = 7: 78.67%
+
+Testing k = 10
+Accuracy for k = 10: 77.00%
+Best Number of Neighbors (k): 10
+Best Distance Metric: euclidean
+Testing the KNN classifier on test data...
+Performance Metrics for KNN:
+Accuracy: 77.00%
+Precision: 0.79
+Recall (Sensitivity): 0.69
+Specificity: 0.84
+F1 Score: 0.73
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 0.85
+KNN model evaluation completed.

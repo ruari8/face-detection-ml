@@ -1,0 +1,46 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Detected image size: 27 x 18
+
+Testing k = 3 with 5-fold cross-validation
+
+Testing k = 5 with 5-fold cross-validation
+
+Testing k = 7 with 5-fold cross-validation
+
+Testing k = 10 with 5-fold cross-validation
+
+Results for different k values (Cross-Validation):
+k	Accuracy(±std)	Precision(±std)	Recall(±std)	F1(±std)	AUC(±std)
+3	95.21%(±2.39)	0.97(±0.03)	0.93(±0.04)	0.95(±0.03)	0.98(±0.01)
+5	92.56%(±2.03)	0.95(±0.03)	0.90(±0.05)	0.92(±0.02)	0.98(±0.01)
+7	90.96%(±2.88)	0.94(±0.03)	0.86(±0.05)	0.90(±0.03)	0.97(±0.01)
+10	90.61%(±2.96)	0.94(±0.04)	0.86(±0.04)	0.90(±0.03)	0.97(±0.02)
+
+Best k value: 3 (Accuracy: 95.21% ± 2.39%)
+Cross-validation for KNN with LBP completed.
+
+Evaluating KNN classifier with Cross-Validation...
+
+Cross-Validation Results for KNN:
+k	Accuracy(±std)	Precision(±std)	Recall(±std)	F1(±std)	AUC(±std)
+3	95.21%(±2.39)	0.97(±0.03)	0.93(±0.04)	0.95(±0.03)	0.98(±0.01)
+5	92.56%(±2.03)	0.95(±0.03)	0.90(±0.05)	0.92(±0.02)	0.98(±0.01)
+7	90.96%(±2.88)	0.94(±0.03)	0.86(±0.05)	0.90(±0.03)	0.97(±0.01)
+10	90.61%(±2.96)	0.94(±0.04)	0.86(±0.04)	0.90(±0.03)	0.97(±0.02)
+
+Best k value: 3 (Mean Accuracy: 95.21% ± 2.39%)
+
+Final evaluation using best k = 3...
+
+Performance Metrics for Best k = 3:
+Accuracy: 99.29%
+Precision: 0.99
+Recall (Sensitivity): 0.99
+Specificity: 0.99
+F1 Score: 0.99
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 1.00
+Cross-Validation Evaluation for KNN completed.

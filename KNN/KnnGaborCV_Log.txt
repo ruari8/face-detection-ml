@@ -1,0 +1,22 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Detected image size: 27 x 18
+
+Testing k = 3
+
+Testing k = 5
+
+Testing k = 7
+
+Testing k = 10
+
+Results for different k values:
+k	Accuracy(±std)	Precision(±std)	Recall(±std)	F1(±std)	AUC(±std)
+3	93.80%(±1.97)	0.93(±0.03)	0.95(±0.03)	0.94(±0.02)	0.97(±0.01)
+5	92.91%(±2.41)	0.92(±0.01)	0.94(±0.05)	0.93(±0.03)	0.97(±0.01)
+7	92.02%(±1.98)	0.91(±0.01)	0.93(±0.04)	0.92(±0.02)	0.97(±0.01)
+10	90.78%(±3.04)	0.89(±0.04)	0.93(±0.05)	0.91(±0.03)	0.96(±0.01)
+
+Best k value: 3 (Accuracy: 93.80% ± 1.97%)

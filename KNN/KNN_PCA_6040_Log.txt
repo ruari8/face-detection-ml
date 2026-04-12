@@ -1,0 +1,82 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Applying PCA...
+Training KNN on PCA-reduced data...
+|=====================================================================================================|
+| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | NumNeighbors |     Distance |
+|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
+|=====================================================================================================|
+|    1 | Best   |     0.33333 |      4.8215 |     0.33333 |     0.33333 |           75 |   seuclidean |
+|    2 | Accept |     0.44369 |     0.93446 |     0.33333 |     0.33772 |           11 |  mahalanobis |
+|    3 | Best   |    0.092342 |     0.36397 |    0.092342 |     0.10438 |            2 |    chebychev |
+|    4 | Accept |     0.17793 |     0.24751 |    0.092342 |      0.0926 |           17 |    cityblock |
+|    5 | Best   |    0.063063 |     0.64301 |    0.063063 |    0.063103 |            2 |  correlation |
+|    6 | Accept |     0.40315 |     0.13526 |    0.063063 |    0.063301 |          221 |  correlation |
+|    7 | Accept |    0.072072 |     0.13883 |    0.063063 |    0.063074 |            3 |  correlation |
+|    8 | Accept |        0.25 |     0.11345 |    0.063063 |    0.063083 |           20 |    chebychev |
+|    9 | Best   |    0.060811 |     0.16671 |    0.060811 |    0.060844 |            1 |    chebychev |
+|   10 | Best   |     0.04955 |     0.41414 |     0.04955 |    0.049567 |            1 |       cosine |
+|   11 | Accept |     0.18018 |     0.16347 |     0.04955 |    0.049577 |           11 |       cosine |
+|   12 | Best   |    0.040541 |     0.11636 |    0.040541 |    0.040557 |            1 |    euclidean |
+|   13 | Accept |     0.13964 |     0.10469 |    0.040541 |    0.040563 |           10 |    euclidean |
+|   14 | Accept |     0.43243 |     0.12764 |    0.040541 |    0.040567 |            1 |      hamming |
+|   15 | Best   |    0.033784 |     0.32361 |    0.033784 |    0.033801 |            1 |     spearman |
+|   16 | Accept |    0.083333 |     0.23987 |    0.033784 |    0.033801 |           11 |     spearman |
+|   17 | Accept |    0.040541 |     0.15462 |    0.033784 |      0.0338 |            1 |    minkowski |
+|   18 | Accept |     0.18694 |     0.21537 |    0.033784 |    0.033799 |           16 |    minkowski |
+|   19 | Accept |     0.43243 |     0.15587 |    0.033784 |    0.033801 |          222 |      jaccard |
+|   20 | Accept |     0.33333 |     0.27537 |    0.033784 |    0.033793 |          222 |     spearman |
+|=====================================================================================================|
+| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | NumNeighbors |     Distance |
+|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
+|=====================================================================================================|
+|   21 | Accept |    0.036036 |     0.22399 |    0.033784 |    0.033797 |            3 |     spearman |
+|   22 | Accept |    0.033784 |     0.16131 |    0.033784 |    0.033796 |            1 |    cityblock |
+|   23 | Accept |     0.43243 |     0.18246 |    0.033784 |    0.033796 |          222 |      hamming |
+|   24 | Accept |     0.14189 |     0.15487 |    0.033784 |    0.033796 |            1 |   seuclidean |
+|   25 | Accept |     0.43243 |     0.14741 |    0.033784 |    0.033795 |            1 |      jaccard |
+|   26 | Accept |     0.43018 |     0.18114 |    0.033784 |    0.033798 |          217 |    euclidean |
+|   27 | Accept |    0.065315 |     0.18833 |    0.033784 |    0.045404 |            2 |     spearman |
+|   28 | Accept |    0.056306 |    0.085949 |    0.033784 |    0.045513 |            1 |  correlation |
+|   29 | Accept |    0.033784 |     0.12363 |    0.033784 |    0.034687 |            1 |    cityblock |
+|   30 | Accept |    0.033784 |     0.11578 |    0.033784 |    0.034247 |            1 |    cityblock |
+
+__________________________________________________________
+Optimization completed.
+MaxObjectiveEvaluations of 30 reached.
+Total function evaluations: 30
+Total elapsed time: 80.8925 seconds
+Total objective function evaluation time: 11.4206
+
+Best observed feasible point:
+    NumNeighbors    Distance
+    ____________    ________
+
+         1          spearman
+
+Observed objective function value = 0.033784
+Estimated objective function value = 0.040957
+Function evaluation time = 0.32361
+
+Best estimated feasible point (according to models):
+    NumNeighbors    Distance 
+    ____________    _________
+
+         1          cityblock
+
+Estimated objective function value = 0.034247
+Estimated function evaluation time = 0.21273
+
+Testing KNN...
+Accuracy: 79.67%
+Evaluating KNN model performance...
+Performance Metrics:
+Accuracy: 79.67%
+Precision: 0.81
+Recall (Sensitivity): 0.73
+Specificity: 0.85
+F1 Score: 0.77
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 0.73

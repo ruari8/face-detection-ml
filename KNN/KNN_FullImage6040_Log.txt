@@ -1,0 +1,87 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Optimizing KNN hyperparameters...
+|=====================================================================================================|
+| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | NumNeighbors |     Distance |
+|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
+|=====================================================================================================|
+|    1 | Best   |     0.32667 |      6.2409 |     0.32667 |     0.32667 |            6 |    chebychev |
+|    2 | Best   |     0.29333 |      1.2066 |     0.29333 |     0.29466 |           36 |     spearman |
+|    3 | Best   |         0.1 |     0.41169 |         0.1 |     0.12223 |            2 |   seuclidean |
+|    4 | Accept |     0.55667 |     0.27387 |         0.1 |     0.10323 |          132 |    chebychev |
+|    5 | Accept |     0.15333 |      0.5234 |         0.1 |     0.10005 |            5 |   seuclidean |
+|    6 | Best   |    0.076667 |     0.17357 |    0.076667 |    0.076657 |            1 |   seuclidean |
+|    7 | Best   |        0.07 |     0.14174 |        0.07 |    0.070019 |            1 |    minkowski |
+|    8 | Accept |     0.21667 |     0.13661 |        0.07 |    0.070029 |           21 |    minkowski |
+|    9 | Error  |         NaN |     0.24975 |        0.07 |    0.070029 |            1 |  mahalanobis |
+|   10 | Accept |        0.07 |     0.12922 |        0.07 |    0.070015 |            1 |    euclidean |
+|   11 | Accept |        0.21 |     0.11617 |        0.07 |    0.070024 |           19 |    euclidean |
+|   12 | Best   |           0 |     0.10371 |           0 |  1.8831e-05 |            1 |      hamming |
+|   13 | Accept |        0.12 |     0.13417 |           0 |  2.8589e-05 |           11 |      hamming |
+|   14 | Accept |           0 |     0.13851 |           0 |   1.675e-05 |            1 |      jaccard |
+|   15 | Accept |        0.14 |     0.14373 |           0 |  2.5622e-05 |           12 |      jaccard |
+|   16 | Accept |    0.046667 |     0.16052 |           0 |  2.4415e-05 |            1 |       cosine |
+|   17 | Accept |     0.27667 |     0.14885 |           0 |  2.2849e-05 |           30 |       cosine |
+|   18 | Accept |        0.07 |     0.17658 |           0 |  2.1953e-05 |            1 |  correlation |
+|   19 | Accept |     0.28333 |     0.15711 |           0 |  2.1372e-05 |           33 |  correlation |
+|   20 | Accept |        0.05 |    0.096682 |           0 |  2.0564e-05 |            1 |    cityblock |
+|=====================================================================================================|
+| Iter | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | NumNeighbors |     Distance |
+|      | result |             | runtime     | (observed)  | (estim.)    |              |              |
+|=====================================================================================================|
+|   21 | Accept |        0.21 |    0.093878 |           0 |  2.0011e-05 |           16 |    cityblock |
+|   22 | Accept |    0.026667 |     0.12603 |           0 |  2.2837e-05 |            2 |      hamming |
+|   23 | Accept |    0.053333 |      0.7832 |           0 |  2.0827e-05 |            1 |     spearman |
+|   24 | Accept |        0.45 |     0.10364 |           0 |  2.0486e-05 |          150 |      hamming |
+|   25 | Accept |    0.026667 |      0.1441 |           0 |  2.0312e-05 |            2 |      jaccard |
+|   26 | Accept |        0.46 |     0.14152 |           0 |   2.061e-05 |          150 |   seuclidean |
+|   27 | Accept |        0.45 |     0.14415 |           0 |  5.1213e-05 |          150 |      jaccard |
+|   28 | Accept |     0.44667 |     0.12783 |           0 |  5.5728e-05 |          148 |    cityblock |
+|   29 | Accept |        0.46 |    0.092644 |           0 |  5.6503e-05 |          149 |    euclidean |
+|   30 | Accept |           0 |     0.11723 |           0 |  2.8629e-05 |            1 |      jaccard |
+
+__________________________________________________________
+Optimization completed.
+MaxObjectiveEvaluations of 30 reached.
+Total function evaluations: 30
+Total elapsed time: 71.8336 seconds
+Total objective function evaluation time: 12.7376
+
+Best observed feasible point:
+    NumNeighbors    Distance
+    ____________    ________
+
+         1          hamming 
+
+Observed objective function value = 0
+Estimated objective function value = 6.8305e-05
+Function evaluation time = 0.10371
+
+Best estimated feasible point (according to models):
+    NumNeighbors    Distance
+    ____________    ________
+
+         1          jaccard 
+
+Estimated objective function value = 2.8629e-05
+Estimated function evaluation time = 0.12973
+
+
+bestK =
+
+     1
+
+Best K (NumNeighbors): 1
+Best Distance Metric: jaccard
+Testing the KNN classifier on test data...
+Performance Metrics:
+Accuracy: 75.00%
+Precision: 0.62
+Recall (Sensitivity): 0.67
+Specificity: 0.79
+F1 Score: 0.64
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 0.73
+KNN model evaluation completed.

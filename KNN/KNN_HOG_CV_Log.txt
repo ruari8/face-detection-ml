@@ -1,0 +1,34 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+Testing k = 3 with 5-fold cross-validation
+
+Testing k = 5 with 5-fold cross-validation
+
+Testing k = 7 with 5-fold cross-validation
+
+Testing k = 10 with 5-fold cross-validation
+
+Results for different k values (Cross-Validation with HOG):
+k	Accuracy(±std)	Precision(±std)	Recall(±std)	F1(±std)	AUC(±std)
+3	93.09%(±2.20)	1.00(±0.01)	0.86(±0.05)	0.92(±0.03)	0.95(±0.03)
+5	91.49%(±2.90)	1.00(±0.01)	0.83(±0.06)	0.90(±0.04)	0.96(±0.04)
+7	89.90%(±3.28)	1.00(±0.01)	0.79(±0.07)	0.88(±0.05)	0.97(±0.04)
+10	87.95%(±3.22)	1.00(±0.01)	0.75(±0.07)	0.85(±0.05)	0.97(±0.04)
+
+Best k value: 3 (Mean Accuracy: 93.09% ± 2.20%)
+Cross-validation for KNN with HOG features completed.
+
+Evaluating the KNN classifier with HOG features and best k = 3...
+
+Performance Metrics for KNN with HOG Features (Best k = 3):
+Accuracy: 100.00%
+Precision: 1.00
+Recall (Sensitivity): 1.00
+Specificity: 1.00
+F1 Score: 1.00
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 1.00
+Evaluation of KNN with HOG features completed.

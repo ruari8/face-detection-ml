@@ -1,0 +1,24 @@
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Testing k = 3
+Accuracy for k = 3: 74.44%
+Testing k = 5
+Accuracy for k = 5: 71.67%
+Testing k = 7
+Accuracy for k = 7: 70.00%
+Testing k = 10
+Accuracy for k = 10: 71.11%
+Best k value: 3 (Accuracy: 74.44%)
+
+Evaluating the KNN classifier with HOG features...
+Performance Metrics for KNN with HOG Features:
+Accuracy: 71.11%
+Precision: 1.00
+Recall (Sensitivity): 0.13
+Specificity: 1.00
+F1 Score: 0.24
+Plotting ROC curve and calculating AUC...
+Area Under the Curve (AUC): 0.87
+Evaluation of KNN with HOG features completed.
