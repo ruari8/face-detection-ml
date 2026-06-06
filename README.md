@@ -1,52 +1,96 @@
-# Face Detection & Recognition System
+# Face Detection and Recognition in MATLAB
 
-A MATLAB-based face detection and recognition system comparing multiple machine learning approaches across different feature extraction methods. Group project for CSC3067 Vision and Machine Learning at Queen's University Belfast.
+Coursework group project for CSC3067 Vision and Machine Learning at Queen's University Belfast. The project compares several classical machine learning approaches for classifying face and non-face images, then applies selected models to sliding-window face localisation.
 
-## Overview
+This is a MATLAB coursework codebase. It is useful for showing the modelling experiments and feature engineering, but it is not packaged as a production face recognition application.
 
-The system classifies face vs non-face images using four ML algorithms, each tested with multiple feature representations. A sliding window detector is also implemented for localising faces within full images.
+## At a glance
 
-## Algorithms Implemented
+| Area | Details |
+| --- | --- |
+| Project type | Vision and machine learning coursework |
+| Language | MATLAB |
+| Task | Face vs non-face classification and sliding-window localisation |
+| Models | KNN, SVM, Random Forest, shallow neural network |
+| Features | Raw pixels, PCA, HOG, Gabor filters, LBP |
+| Outputs | Log files, trained `.mat` files, figures, result summaries |
 
-| Algorithm | Feature Types Tested |
-|---|---|
-| KNN | Full image pixels, HOG, Gabor filters, LBP |
-| SVM | Full image pixels, HOG, Gabor filters, LBP |
-| Deep Neural Network | Full image pixels, HOG |
-| Random Forest | HOG, Gabor filters, LBP |
+## Methods covered
 
-## Feature Extraction
+| Folder | Contents |
+| --- | --- |
+| `KNN/` | KNN experiments across full-image, PCA, HOG, Gabor, and LBP features |
+| `SVM/` | SVM classifiers and sliding-window detector experiments |
+| `RF/` | Random Forest models, saved models, detector scripts, figures |
+| `Deep Neural Network/` | Shallow neural network experiments and detector scripts |
 
-- **Full Image** — raw pixel values as feature vector
-- **HOG (Histogram of Oriented Gradients)** — edge/gradient based descriptor
-- **Gabor Filters** — texture-based frequency/orientation features
-- **LBP (Local Binary Patterns)** — local texture descriptor
+The experiments compare:
 
-## Evaluation Methodology
-
-Each classifier was evaluated using:
-- Standard 50/50 train-test split
-- 60/40 train-test split
+- Standard train/test splits
+- 60/40 train/test splits
 - K-fold cross-validation
+- Multiple feature extraction approaches
+- Sliding-window detection with non-maximum suppression
 
-Results logged in `*_Log.txt` files alongside each script.
+## Repository structure
 
-## Project Structure
-
-```
-├── KNN/          # K-Nearest Neighbours classifiers
-├── SVM/          # Support Vector Machine classifiers
-├── Deep Neural Network/   # DNN with sliding window detector
-├── RF/           # Random Forest classifiers
+```text
+KNN/
+  images/                  Face and non-face image sets
+  *.m                      KNN experiment scripts
+  *_Log.txt                Previous run logs
+  KNN_Results_Summary.csv  Summary of KNN metrics
+SVM/
+  Sliding Detector/        SVM detector experiments
+  archive/                 Older SVM/kernel experiments
+RF/
+  Sliding Detector/        Random Forest detector experiments
+  rf figs/                 Result figures
+Deep Neural Network/
+  Sliding Detector/        DNN detector experiments
 ```
 
 ## Requirements
 
-- MATLAB (tested with R2024b)
+- MATLAB, tested during coursework development
 - Image Processing Toolbox
 - Statistics and Machine Learning Toolbox
-- Deep Learning Toolbox (for DNN)
+- Deep Learning Toolbox for the neural network scripts
+
+## Running the experiments
+
+Open the repository in MATLAB and run scripts from the relevant folder so relative dataset paths resolve correctly.
+
+Example KNN run:
+
+```matlab
+cd KNN
+RunAllScripts
+```
+
+Example individual scripts:
+
+```matlab
+cd KNN
+KNN_HOG
+
+cd ../SVM
+SVM_hog
+
+cd ../RF
+RF_Hog
+```
+
+Sliding-window detector examples are in the `Sliding Detector` subfolders. They use saved model files where present and test images such as `im1.jpg` to `im4.jpg`.
+
+## Results
+
+The repository includes prior run logs and figures. For example, `KNN/KNN_Results_Summary.csv` records KNN accuracy across feature variants, with cross-validation runs generally performing better than the simple train/test splits.
+
+Treat these results as coursework experiment outputs rather than a controlled benchmark. Some folders also contain archived scripts and intermediate files that were kept for traceability.
 
 ## Notes
 
-This was a group project. The codebase covers systematic comparison of ML approaches for face detection, with each algorithm explored across multiple feature engineering strategies.
+- This was a group project, so file ownership is mixed across the codebase.
+- The code is script-oriented MATLAB rather than a package with one unified entry point.
+- The included images and generated datasets are intended to reproduce the coursework experiments.
